@@ -1,0 +1,8 @@
+BasicNftTest:testNameIsCorrect() (gas: 10143)
+BasicNftTest:test_CanMintAndHaveBalance() (gas: 154924)
+BasicNftTest:test_counterIncrementsAfterMint() (gas: 152129)
+BasicNftTest:test_initialTokenCounterIsZero() (gas: 7804)
+BasicNftTest:test_onlyOwnerCanTransfer() (gas: 173710)
+BasicNftTest:test_ownerSetCorrectlyOnMint() (gas: 150785)
+BasicNftTest:test_tokenIdMatchesCounterBeforeIncrement() (gas: 150777)
+BasicNftTest:test_tokenURIStoredCorrectly() (gas: 153314)

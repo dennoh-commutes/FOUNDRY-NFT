@@ -1,0 +1,30 @@
+{
+    "name": "The Formless Mind",
+    "description": "An abstract NFT representing human consciousness dissolving into pure awareness — a symbol of awakening, ego death, and infinite silence.",
+    "image": "ipfs://QmW6Piy2fJchPyzHXSA9etAfptcPFArPTiK2zXrpgwkcV6",
+    "attributes": [
+        {
+            "trait_type": "Essence",
+            "value": "Formless Awareness"
+        },
+        {
+            "trait_type": "Medium",
+            "value": "Digital Smoke"
+        },
+        {
+            "trait_type": "Mood",
+            "value": "Transcendent"
+        }
+    ],
+    "properties": {
+        "creator": {
+            "name": "Dennis Scripts"
+        },
+        "files": [
+            {
+                "uri": "ipfs://<your-image-CID-here>",
+                "type": "image/jpeg"
+            }
+        ]
+    }
+}

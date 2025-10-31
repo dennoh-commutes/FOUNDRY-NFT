@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Excellent — here’s your **updated professional README.md** including the new
 🪄 **“Project Vision”** section — written in a way that sounds *forward-thinking, elegant, and professional*,
 without mixing it with your visionary consciousness project.
@@ -194,3 +195,7 @@ This project is released under the **MIT License**.
 ---
 
 Would you like me to polish this next into a **GitHub-optimized Markdown layout** (with emojis, badges, and repo header visuals) so it instantly looks “featured project”–ready when people visit your repo?
+=======
+# FOUNDRY-NFT
+A Foundry-based NFT smart contract boilerplate featuring ERC721 implementation, deployment scripts, and test automation. Ideal for Solidity developers building on L1 and zksync testnets.
+>>>>>>> afe88f2889a8742f5357907a931b424bbbd7f776

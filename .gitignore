@@ -14,3 +14,10 @@ docs/
 .env
 
 broadcast/
+
+# Ignore local dependencies
+lib/forge-std
+lib/foundry-devOps
+lib/openzeppelin-contracts
+
+README-dev-notes.md

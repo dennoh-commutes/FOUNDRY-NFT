@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-Excellent — here’s your **updated professional README.md** including the new
-🪄 **“Project Vision”** section — written in a way that sounds *forward-thinking, elegant, and professional*,
-without mixing it with your visionary consciousness project.
-
----
 
 ## 🪙 MoodNft — Dynamic On-Chain Mood NFT (Solidity, Foundry, zkSync Ready)
 
@@ -13,28 +7,33 @@ without mixing it with your visionary consciousness project.
 
 ---
 
-### 📖 Overview
+###  Overview
 
+This project demonstrates advanced **NFT design**, **contract architecture**, and **stateful metadata encoding** using **Base64**, ensuring that all image data lives 100% on-chain — without relying on IPFS or external storage.
 **MoodNft** is a fully on-chain, dynamic NFT that visually reflects the holder’s emotional state.
 Each minted NFT starts with a **default “HAPPY” mood** and can be flipped to “SAD” (and vice versa) directly on-chain using Solidity’s efficient state management.
 
-This project demonstrates advanced **NFT design**, **contract architecture**, and **stateful metadata encoding** using **Base64**, ensuring that all image data lives 100% on-chain — without relying on IPFS or external storage.
+---
+
+###  Key Features
+
+**Fully On-Chain Metadata** – SVGs encoded directly into the contract using Base64.
+
+**Dynamic NFT Logic** – Each token’s mood can toggle between “HAPPY” and “SAD.”
+
+**ERC721 Standard** – Built on top of OpenZeppelin’s proven ERC721 implementation.
+
+**Custom Errors for Gas Optimization** – Replaces `require()` messages for lower gas costs.
+
+**Test Coverage with Foundry** – Includes structured unit tests following the Arrange-Act-Assert pattern.
+
+**zkSync Compatible** – Easily deployable to Layer-2 zkSync Era networks for scalability and low fees.
+
+**Readable & Modular Architecture** – Written with best practices in Solidity 0.8.x for maintainability and clarity.
 
 ---
 
-### ⚙️ Key Features
-
-✅ **Fully On-Chain Metadata** – SVGs encoded directly into the contract using Base64.
-✅ **Dynamic NFT Logic** – Each token’s mood can toggle between “HAPPY” and “SAD.”
-✅ **ERC721 Standard** – Built on top of OpenZeppelin’s proven ERC721 implementation.
-✅ **Custom Errors for Gas Optimization** – Replaces `require()` messages for lower gas costs.
-✅ **Test Coverage with Foundry** – Includes structured unit tests following the Arrange-Act-Assert pattern.
-✅ **zkSync Compatible** – Easily deployable to Layer-2 zkSync Era networks for scalability and low fees.
-✅ **Readable & Modular Architecture** – Written with best practices in Solidity 0.8.x for maintainability and clarity.
-
----
-
-### 🧩 Tech Stack
+## Tech Stack
 
 | Layer             | Technology                           |
 | :---------------- | :----------------------------------- |
@@ -48,23 +47,32 @@ This project demonstrates advanced **NFT design**, **contract architecture**, an
 
 ---
 
-### 🧪 Testing
+###  Testing
 
 Unit tests are written using **Foundry**, following the **Arrange → Act → Assert** pattern to ensure clarity and reliability.
 
 Example:
 
 ```solidity
-function test_mintSetsDefaultMoodToHappy() public {
-    // Arrange
-    MoodNft moodNft = new MoodNft(sadSvg, happySvg);
-    
-    // Act
-    moodNft.mintNft();
+  function test_tokenURIReflectsMoodChange() public {
+        uint256 tokenId = 0;
+        vm.prank(USER);
+        moodNft.mintNft();
 
-    // Assert
-    assert(moodNft.getMood(0) == MoodNft.Mood.HAPPY);
-}
+        string memory happyTokenUri = moodNft.tokenURI(tokenId);
+
+        vm.prank(USER);
+        moodNft.flipMood(tokenId);
+
+        string memory sadTokenUri = moodNft.tokenURI(tokenId);
+
+        assertEq(
+            keccak256(abi.encodePacked(happyTokenUri)) ==
+                keccak256(abi.encodePacked(sadTokenUri)),
+            false,
+            "TokenURI should update to reflect mood change"
+        );
+    }
 ```
 
 Run tests:
@@ -75,9 +83,9 @@ forge test -vvv
 
 ---
 
-### 🚀 Deployment
+###  Deployment
 
-#### 🧱 Deploy to Sepolia
+####  Deploy to Sepolia
 
 ```bash
 forge script script/DeployMoodNft.s.sol:DeployMoodNft \
@@ -99,7 +107,7 @@ forge script script/DeployMoodNft.s.sol:DeployMoodNft \
 
 ---
 
-### 🧭 Contract Functions
+###  Contract Functions
 
 | Function                    | Description                                 |
 | :-------------------------- | :------------------------------------------ |
@@ -111,14 +119,14 @@ forge script script/DeployMoodNft.s.sol:DeployMoodNft \
 
 ---
 
-### 🔍 Contract Verification
+###  Contract Verification
 
 The contract is verified and viewable on **Etherscan Sepolia**:
 👉 [View Verified Contract on Etherscan](https://sepolia.etherscan.io/address/0x645B18451D1f4C419688AF2522FE1411261CF114)
 
 ---
 
-### 🧠 Best Practices Used
+###  Best Practices Used
 
 * **Error Customization:** `error MoodNft__CantFlipMoodIfNotOwnerOrApproved()` for gas efficiency
 * **Security Checks:** Ownership and approval validation before mood flipping
@@ -127,7 +135,7 @@ The contract is verified and viewable on **Etherscan Sepolia**:
 
 ---
 
-### 🏗️ Project Structure
+###  Project Structure
 
 ```
 foundry-nft-f23/
@@ -143,7 +151,7 @@ foundry-nft-f23/
 
 ---
 
-### 🧰 Requirements
+###  Requirements
 
 * Node.js (optional, for scripts)
 * Foundry
@@ -174,28 +182,19 @@ into **living, expressive digital assets** that mirror real-world states and dat
 
 ---
 
-### 🧑‍💻 Author
+###  Author
 
 **Developer:** [Kiptoo Dennis]
-**GitHub:** [YourGitHubUsername]
-**Email :** [[youremail@example.com](mailto:denniskiptoo034@gmail.com)]
+
+
+**Email :** [(denniskiptoo034@gmail.com)]
 
 ---
 
-### 📜 License
+###  License
 
 This project is released under the **MIT License**.
 
 ---
 
-### 📈 SEO Keywords
 
-*Solidity NFT Developer, On-Chain NFT, Dynamic NFT, ERC721 Foundry, zkSync NFT, Mood NFT Project, Base64 Metadata, Solidity Smart Contracts, Ethereum Sepolia Testnet, Blockchain Developer Portfolio, Professional Smart Contract Engineer*
-
----
-
-Would you like me to polish this next into a **GitHub-optimized Markdown layout** (with emojis, badges, and repo header visuals) so it instantly looks “featured project”–ready when people visit your repo?
-=======
-# FOUNDRY-NFT
-A Foundry-based NFT smart contract boilerplate featuring ERC721 implementation, deployment scripts, and test automation. Ideal for Solidity developers building on L1 and zksync testnets.
->>>>>>> afe88f2889a8742f5357907a931b424bbbd7f776
